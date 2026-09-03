@@ -4,7 +4,7 @@ using TesteEscolaAPI.DTOs.Requests;
 
 namespace TesteEscolaAPI.Services.Interfaces
 {
-    internal interface IAlunoService
+    public interface IAlunoService
     {
         PagedResultDto<AlunoDto> GetAll(string nome, int pagina, int tamanhoPagina);
         AlunoDto GetById(int id);

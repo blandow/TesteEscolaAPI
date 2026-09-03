@@ -7,5 +7,6 @@ namespace TesteEscolaAPI.DTOs.Responses
 {
     public class AlunoDto
     {
+       
     }
 }

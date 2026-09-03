@@ -7,5 +7,6 @@ namespace TesteEscolaAPI.DTOs.Requests
 {
     public class AlunoCreateDto
     {
+        
     }
 }

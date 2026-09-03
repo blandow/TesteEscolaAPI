@@ -3,7 +3,7 @@ using TesteEscolaAPI.Models;
 
 namespace TesteEscolaAPI.Repositories.Interfaces
 {
-    internal interface IAlunoRepository
+    public interface IAlunoRepository
     {
 
         IEnumerable<Aluno> GetAll(string nomeFiltro, int pagina, int tamanhoPagina, out int total);
