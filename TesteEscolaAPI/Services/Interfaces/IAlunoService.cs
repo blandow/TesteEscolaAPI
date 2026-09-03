@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using TesteEscolaAPI.DTOs.Responses;
+using TesteEscolaAPI.DTOs.Requests;
+
 
 namespace TesteEscolaAPI.Services.Interfaces
 {
     internal interface IAlunoService
     {
+        PagedResultDto<AlunoDto> GetAll(string nome, int pagina, int tamanhoPagina);
+        AlunoDto GetById(int id);
+        AlunoDto Create(AlunoCreateDto dto);
+        void Update(int id, AlunoUpdateDto dto);
+        void Delete(int id);
     }
 }
