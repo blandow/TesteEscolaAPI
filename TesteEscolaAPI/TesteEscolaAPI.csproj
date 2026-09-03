@@ -113,6 +113,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\DbConnectionFactory.cs" />
+    <Compile Include="Infrastructure\IDbConnectionFactory.cs" />
     <Compile Include="Models\Aluno.cs" />
     <Compile Include="Models\Matricula.cs" />
     <Compile Include="Models\Turma.cs" />
