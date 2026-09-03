@@ -1,0 +1,28 @@
+## Visual Studio / .NET Framework
+.vs/
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+
+## Build e Arquivos Temporários
+[Tt]emp/
+*.tmp
+*.log
+*.cache
+
+## Pacotes e Dependências
+packages/
+*.nupkg
+
+## SQL Server / LocalDB (caso o banco crie arquivos de dados locais)
+*.mdf
+*.ldf
+
+## Arquivos do SO
+.DS_Store
+Thumbs.db
