@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using TesteEscolaAPI.DTOs.Requests;
+using TesteEscolaAPI.DTOs.Responses;
 
 namespace TesteEscolaAPI.Services.Interfaces
 {
-    internal interface IMatriculaService
+    public interface IMatriculaService
     {
+        MatriculaResultDto Matricular(MatriculaCreateDto dto);
     }
 }
