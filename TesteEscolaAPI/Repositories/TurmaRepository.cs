@@ -1,11 +1,21 @@
-﻿using System;
+﻿using Dapper;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
+using TesteEscolaAPI.Models;
+using TesteEscolaAPI.Repositories.Interfaces;
 
 namespace TesteEscolaAPI.Repositories
 {
-    public class TurmaRepository
+    public class TurmaRepository : ITurmaRepository
     {
+        public Turma GetByIdComTransacao(int id, IDbConnection connection, IDbTransaction transaction)
+        {
+            var sql = "SELECT Id, Nome, Periodo, VagasTotal, VagasDisponiveis FROM dbo.Turma WHERE Id = @Id";
+            return connection.QueryFirstOrDefault<Turma>(sql, new { Id = id }, transaction);
+
+        }
     }
 }
