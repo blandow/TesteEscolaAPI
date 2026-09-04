@@ -132,6 +132,7 @@
     <Compile Include="Services\Interfaces\IRelatorioService.cs" />
     <Compile Include="Services\Interfaces\ITurmaService.cs" />
     <Compile Include="Services\MatriculaService.cs" />
+    <Compile Include="Services\RelatorioService.cs" />
     <Compile Include="Services\TurmaService.cs" />
   </ItemGroup>
   <ItemGroup>

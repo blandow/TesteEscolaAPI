@@ -6,6 +6,6 @@ namespace TesteEscolaAPI.Services.Interfaces
 {
     public interface IRelatorioService
     {
-        IEnumerable<RelatorioAlunosPorTurmaDto> GetRelatorioAlunosPorTurma();
+        IEnumerable<RelatorioAlunosPorTurmaDto> GetAlunosPorTurma();
     }
 }
