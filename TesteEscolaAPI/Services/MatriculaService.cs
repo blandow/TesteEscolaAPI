@@ -30,7 +30,7 @@ namespace TesteEscolaAPI.Services
 
         public MatriculaResultDto Matricular(MatriculaCreateDto dto)
         {
-            if (dto.AlunoId <= 0 || dto.TurmaId <= 0)
+            if (dto.AlunoId <= 0 || dto.TurmaId <= 0  )
                 throw new ArgumentException("AlunoId e TurmaId são obrigatórios.");
 
             using (var connection = _connectionFactory.CreateConnection())
