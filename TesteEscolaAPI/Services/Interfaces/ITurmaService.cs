@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TesteEscolaAPI.DTOs.Responses;
 
 namespace TesteEscolaAPI.Services.Interfaces
 {
-    internal interface ITurmaService
+    public interface ITurmaService
     {
+        IEnumerable<TurmaDto> GetAll();
     }
 }
