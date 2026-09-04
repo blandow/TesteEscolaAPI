@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using TesteEscolaAPI.Infrastructure;
@@ -87,6 +88,11 @@ namespace TesteEscolaAPI.Repositories
                 connection.Open();
                 return connection.Execute("UPDATE dbo.Aluno SET Ativo = 0 WHERE Id = @Id", new { Id = id }) > 0;
             }
+        }
+        public Aluno GetByIdComTransacao(int id, IDbConnection connection, IDbTransaction transaction)
+        {
+            var sql = "SELECT Id, Nome, Email, DataNascimento, Ativo, DataCadastro FROM dbo.Aluno WHERE Id = @Id";
+            return connection.QueryFirstOrDefault<Aluno>(sql, new { Id = id }, transaction);
         }
     }
 }

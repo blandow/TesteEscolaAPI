@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data;
 using TesteEscolaAPI.Models;
 
 namespace TesteEscolaAPI.Repositories.Interfaces
@@ -11,6 +12,7 @@ namespace TesteEscolaAPI.Repositories.Interfaces
         int Insert(Aluno aluno);
         bool Update(Aluno aluno);
         bool SoftDelete(int id);
+        Aluno GetByIdComTransacao(int id, IDbConnection connection, IDbTransaction transaction);
 
     }
 }
