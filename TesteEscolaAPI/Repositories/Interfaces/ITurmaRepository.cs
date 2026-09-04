@@ -8,7 +8,7 @@ using TesteEscolaAPI.Models;
 
 namespace TesteEscolaAPI.Repositories.Interfaces
 {
-    internal interface ITurmaRepository
+    public interface ITurmaRepository
     {
         Turma GetByIdComTransacao(int id, IDbConnection connection, IDbTransaction transaction);
         bool DecrementarVaga(int turmaId, IDbConnection connection, IDbTransaction transaction);
