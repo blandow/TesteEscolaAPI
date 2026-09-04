@@ -1,11 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Web.Http;
+using TesteEscolaAPI.Infrastructure;
+using TesteEscolaAPI.Repositories;
+using TesteEscolaAPI.Services;
+using TesteEscolaAPI.Services.Interfaces;
 
 namespace TesteEscolaAPI.Controllers
 {
-    public class RelatoriosController
+    [RoutePrefix("api/relatorios")]
+    public class RelatoriosController : ApiController
     {
+        private readonly IRelatorioService _service;
+
+        public RelatoriosController()
+        {
+            _service = new RelatorioService(new RelatorioRepository(new DbConnectionFactory()));
+        }
+
+        [HttpGet, Route("alunos-por-turma")]
+        public IHttpActionResult Get()
+        {
+            return Ok(_service.GetAlunosPorTurma());
+        }
     }
 }
