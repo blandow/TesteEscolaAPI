@@ -18,6 +18,16 @@ namespace TesteEscolaAPI.Repositories
         {
             _connectionFactory = connectionFactory;
         }
+        public IEnumerable<Turma> GetAll()
+        {
+            using (var connection = _connectionFactory.CreateConnection())
+            {
+                connection.Open();
+                var sql = "SELECT Id, Nome, Periodo, VagasTotal, VagasDisponiveis FROM dbo.Turma ORDER BY Nome";
+                return connection.Query<Turma>(sql).ToList();
+            }
+        }
+
         public Turma GetByIdComTransacao(int id, IDbConnection connection, IDbTransaction transaction)
         {
             var sql = "SELECT Id, Nome, Periodo, VagasTotal, VagasDisponiveis FROM dbo.Turma WHERE Id = @Id";

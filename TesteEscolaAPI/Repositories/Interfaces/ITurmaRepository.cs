@@ -10,6 +10,7 @@ namespace TesteEscolaAPI.Repositories.Interfaces
 {
     public interface ITurmaRepository
     {
+        IEnumerable<Turma> GetAll();
         Turma GetByIdComTransacao(int id, IDbConnection connection, IDbTransaction transaction);
         bool DecrementarVaga(int turmaId, IDbConnection connection, IDbTransaction transaction);
     }
