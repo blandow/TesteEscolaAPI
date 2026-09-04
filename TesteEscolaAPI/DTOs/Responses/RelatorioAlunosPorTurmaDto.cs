@@ -7,5 +7,8 @@ namespace TesteEscolaAPI.DTOs.Responses
 {
     public class RelatorioAlunosPorTurmaDto
     {
+        public string NomeTurma { get; set; }
+        public int QuantidadeAlunosMatriculados { get; set; }
+        public int VagasRestantes { get; set; }
     }
 }
