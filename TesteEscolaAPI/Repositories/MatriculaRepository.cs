@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
+using TesteEscolaAPI.Models;
 using TesteEscolaAPI.Repositories.Interfaces;
 
 namespace TesteEscolaAPI.Repositories
@@ -19,6 +20,16 @@ namespace TesteEscolaAPI.Repositories
 
             var count = connection.ExecuteScalar<int>(sql, new { AlunoId = alunoId, TurmaId = turmaId }, transaction);
             return count > 0;
+        }
+
+        public int InsertMatricula(Matricula matricula, IDbConnection connection, IDbTransaction transaction)
+        {
+            var sql = @"
+                INSERT INTO dbo.Matricula (AlunoId, TurmaId, DataMatricula)
+                VALUES (@AlunoId, @TurmaId, GETDATE());
+                SELECT CAST(SCOPE_IDENTITY() AS INT);";
+
+            return connection.ExecuteScalar<int>(sql, matricula, transaction);
         }
     }
 }
