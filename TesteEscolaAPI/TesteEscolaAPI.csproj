@@ -129,6 +129,7 @@
     <Compile Include="Services\AlunoService.cs" />
     <Compile Include="Services\Interfaces\IAlunoService.cs" />
     <Compile Include="Services\Interfaces\IMatriculaService.cs" />
+    <Compile Include="Services\Interfaces\IRelatorioService.cs" />
     <Compile Include="Services\Interfaces\ITurmaService.cs" />
     <Compile Include="Services\MatriculaService.cs" />
     <Compile Include="Services\TurmaService.cs" />
