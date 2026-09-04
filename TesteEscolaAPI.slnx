@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="TesteEscolaAPI/TesteEscolaAPI.csproj" Id="43fb94c6-2f1f-41ea-af37-fe642cad7870" />
+  <Project Path="TesteUnitarioEscolaAPI.Tests/TesteUnitarioEscolaAPI.Tests.csproj" Id="809f8f67-ae63-4c32-954d-10fcd0262e49" />
 </Solution>
